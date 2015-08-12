@@ -19,3 +19,5 @@ from the home directory
 
 - `npm i`
 - `npm start`
+
+got http://localhost:8080
