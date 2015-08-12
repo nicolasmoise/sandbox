@@ -1,0 +1,15 @@
+div(ng-controller= 'addController')
+    form(name='addMemberForm', ng-submit='addMember()')
+        .form-group
+            label(for='firstName') First Name *    
+            input.form-control(type='text', placeholder='First Name', ng-model='newMember.firstName', required)
+
+        .form-group
+            label(for='firstName') Last Name *   
+            input.form-control(type='text', placeholder='Last Name', ng-model='newMember.lastName' required)
+
+        .form-group
+            label(for='phoneNumber') Phone Number  
+            input.form-control(type='text', placeholder='Phone Number', ng-model='newMember.phoneNumber', required)
+
+        button.btn.btn-primary(type='submit') Submit

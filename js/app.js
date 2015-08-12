@@ -8,21 +8,21 @@ app.provider('sbRoutes', function() {
     
     this.routes = [
 		{
-			name: 'home',
-			title: 'Home',
-			templateUrl: 'home-page'
+			name: 'add',
+			title: 'Create',
+			templateUrl: 'add-page'
 		}, {
-			name: 'projects',
-			title: 'Projects',
-			templateUrl: 'projects-page'
+			name: 'members',
+			title: 'Members',
+			templateUrl: 'members-page'
+		}, {
+			name: 'about',
+			title: 'About',
+			templateUrl: 'about-page'
 		}, {
 			name: 'contact',
-			title: 'Contact Us',
+			title: 'Contact',
 			templateUrl: 'contact-page'
-		}, {
-			name: 'portfolio',
-			title: 'Portfolio',
-			templateUrl: 'portfolio-page'
 		}
 	];
 
@@ -41,14 +41,40 @@ app.config(['$routeProvider', '$locationProvider', 'sbRoutesProvider',
 		});
 
 		$routeProvider.otherwise({
-			redirectTo: '/home'
+			redirectTo: '/add'
 		});
 
 		$locationProvider.html5Mode(true);
 	}
 ]);
 
-app.controller('mainController', ['$route', 'sbRoutes', '$scope', function($route, sbRoutes, $scope){
+app.controller('menuController', ['$route', 'sbRoutes', '$scope', function($route, sbRoutes, $scope){
 	$scope.sbRoutes = sbRoutes;
 	$scope.$route = $route;
-}])
+}]);
+
+app.controller('addController', ['$scope', 'Members', function($scope, Members){
+
+	$scope.newMember = {};
+
+	$scope.addMember = function(){
+		Members.create($scope.newMember);
+		$scope.newMember = {};
+	};
+}]);
+
+app.controller('membersController', ['$scope', 'Members', function($scope, Members){
+	$scope.members = Members.get();
+}]);
+
+app.service('Members', [function(){
+	var members = [];
+
+	this.create = function(member){
+		members.push(member);
+	};
+
+	this.get = function(){
+		return members;
+	} 
+}]);

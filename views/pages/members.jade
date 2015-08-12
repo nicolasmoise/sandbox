@@ -1,0 +1,9 @@
+table.table.table-hover(ng-controller = 'membersController')
+    tr
+        th First Name
+        th Last Name
+        th Phone Number
+    tr(ng-repeat= 'member in members')
+        td {{member.firstName}}
+        td {{member.lastName}}
+        td {{member.phoneNumber}}

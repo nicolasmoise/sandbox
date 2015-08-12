@@ -16,18 +16,18 @@ html(lang='en', data-ng-app="nm-sandbox")
         script(src="lib/angular-route/angular-route.min.js")
         script(src="js/app.js")
 
-        script#home-page(type="text/ng-template")
-            include pages/home
-        script#portfolio-page(type="text/ng-template")
-            include pages/portfolio
-        script#projects-page(type="text/ng-template")
-            include pages/projects
+        script#add-page(type="text/ng-template")
+            include pages/add
+        script#members-page(type="text/ng-template")
+            include pages/members
+        script#about-page(type="text/ng-template")
+            include pages/about
         script#contact-page(type="text/ng-template")
             include pages/contact
 
-    body(ng-controller="mainController")
+    body
         // Fixed navbar
-        .navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .navbar.navbar-default.navbar-fixed-top(role='navigation', ng-controller="menuController")
             .container
                 .navbar-header
                     a.navbar-brand(href='/home') Sandobox Website
