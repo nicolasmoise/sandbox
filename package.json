@@ -1,0 +1,25 @@
+{
+  "name": "kcprojects",
+  "version": "0.0.1",
+  "description": "KC Projects Website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://nmoise@bitbucket.org/nmoise/kcprojects.git"
+  },
+  "keywords": [
+    "kcprojects"
+  ],
+  "author": "nicolas moise",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^3.5.0",
+    "jade": "^1.3.0",
+    "forever": "^0.11.1"
+  }
+}
