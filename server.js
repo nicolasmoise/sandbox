@@ -12,6 +12,7 @@ app.get("/*", function(req, res) {
 });
 
 var port = 8080;
+
 app.listen(port, function() {
     console.log("Listening on " + port);
 });

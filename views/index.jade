@@ -1,23 +1,22 @@
 doctype html
-html(lang='en', data-ng-app="kc-projects")
+html(lang='en', data-ng-app="nm-sandbox")
     head
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='description', content='')
         meta(name='author', content='')
         meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
-        title KC Projects
+        title Sandbox
         link(rel="stylesheet", type="text/css", href="lib/bootstrap/dist/css/bootstrap.css")
         link(rel="stylesheet", type="text/css", href="css/main.css")
         link(rel="stylesheet", type="text/css", href="css/responsive-slider.css")
 
         link(href='non-responsive.css', rel='stylesheet')
-        script(src="lib/jquery/dist/jquery.js")
-        script(src="lib/bootstrap/dist/js/bootstrap.js")
-        script(src="js/jquery.event.move.js")
-        script(src="js/responsive-slider.js")
-        script(src="lib/angular/angular.js")
-        script(src="lib/angular-route/angular-route.js")
+        
+        script(src="lib/jquery/dist/jquery.min.js")
+        script(src="lib/bootstrap/dist/js/bootstrap.min.js")
+        script(src="lib/angular/angular.min.js")
+        script(src="lib/angular-route/angular-route.min.js")
         script(src="js/app.js")
         script.
           $( document ).ready( function() {
@@ -36,15 +35,15 @@ html(lang='en', data-ng-app="kc-projects")
         script#contact-page(type="text/ng-template")
             include pages/contact
 
-    body(ng-controller="kcMainController")
+    body(ng-controller="mainController")
         // Fixed navbar
         .navbar.navbar-default.navbar-fixed-top(role='navigation')
             .container
                 .navbar-header
-                    a.navbar-brand(href='/home') KC Projects & Construction
+                    a.navbar-brand(href='/home') Sandobox Website
                 .navbar-collapse.collapse
                     ul.nav.navbar-nav
-                        li(ng-repeat='route in kcRoutes', ng-class="{active: $route.current.title == route.title}")
+                        li(ng-repeat='route in sbRoutes', ng-class="{active: $route.current.title == route.title}")
                             a(ng-href='/{{route.name}}') {{route.title}}
         //Container
         #main-ctn(data-ng-view)

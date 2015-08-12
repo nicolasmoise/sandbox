@@ -1,10 +1,10 @@
 'use strict';
 
-var app = angular.module('kc-projects', ['ngRoute']);
+var app = angular.module('nm-sandbox', ['ngRoute']);
 
 
 
-app.provider('kcRoutes', function() {
+app.provider('sbRoutes', function() {
     
     this.routes = [
 		{
@@ -32,11 +32,11 @@ app.provider('kcRoutes', function() {
     };
 });
 
-app.config(['$routeProvider', '$locationProvider', 'kcRoutesProvider', 
+app.config(['$routeProvider', '$locationProvider', 'sbRoutesProvider', 
 
-	function($routeProvider, $locationProvider, kcPagesProvider){
+	function($routeProvider, $locationProvider, sbPagesProvider){
 
-		kcPagesProvider.routes.map(function(page){
+		sbPagesProvider.routes.map(function(page){
 			$routeProvider.when('/' + page.name, { templateUrl: page.templateUrl });
 		});
 
@@ -48,7 +48,7 @@ app.config(['$routeProvider', '$locationProvider', 'kcRoutesProvider',
 	}
 ]);
 
-app.controller('kcMainController', ['$route', 'kcRoutes', '$scope', function($route, kcRoutes, $scope){
-	$scope.kcRoutes = kcRoutes;
+app.controller('mainController', ['$route', 'sbRoutes', '$scope', function($route, sbRoutes, $scope){
+	$scope.sbRoutes = sbRoutes;
 	$scope.$route = $route;
 }])
