@@ -9,23 +9,13 @@ html(lang='en', data-ng-app="nm-sandbox")
         title Sandbox
         link(rel="stylesheet", type="text/css", href="lib/bootstrap/dist/css/bootstrap.css")
         link(rel="stylesheet", type="text/css", href="css/main.css")
-        link(rel="stylesheet", type="text/css", href="css/responsive-slider.css")
 
-        link(href='non-responsive.css', rel='stylesheet')
-        
         script(src="lib/jquery/dist/jquery.min.js")
         script(src="lib/bootstrap/dist/js/bootstrap.min.js")
         script(src="lib/angular/angular.min.js")
         script(src="lib/angular-route/angular-route.min.js")
         script(src="js/app.js")
-        script.
-          $( document ).ready( function() {
-            $('.responsive-slider').responsiveSlider({
-              autoplay: true,
-              interval: 5000,
-              transitionTime: 300
-            });
-          });
+
         script#home-page(type="text/ng-template")
             include pages/home
         script#portfolio-page(type="text/ng-template")
