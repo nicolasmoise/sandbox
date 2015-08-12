@@ -1,7 +1,7 @@
 {
-  "name": "kcprojects",
+  "name": "Sandbox",
   "version": "0.0.0",
-  "description": "Kc Projects Website",
+  "description": "Website Sandbox",
   "main": "server.js",
   "license": "MIT",
   "private": true,

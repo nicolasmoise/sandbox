@@ -7,10 +7,15 @@ Features:
 - Script minification and bundling
 - npm and bower libraries
 
+# Dependencies:
+
+- Node.js (v.0.10.26 preffered)
+- NPM
+
+
 # How To:
 
-from the top directory
+from the home directory
 
 - `npm i`
-- `npm run build`
 - `npm start`
