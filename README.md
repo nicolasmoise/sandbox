@@ -25,8 +25,8 @@ Other things used:
 
 # How To:
 
-from the home directory
-
+- `git clone https://github.com/nicolasmoise/sandbox.git`
+- `cd sandbox`
 - `npm i`
 - `npm start`
 
