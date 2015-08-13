@@ -1,4 +1,6 @@
-# My Personal Sandbox
+# Sandbox
+
+This is a simple website meant to showcase my basic Angular skills and coding style
 
 Features:
 
