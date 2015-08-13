@@ -20,10 +20,10 @@ app.provider('sbRoutes', function() {
       title: 'About',
       templateUrl: 'about-page'
     }, {
-			name: 'contact',
-			title: 'Contact',
-			templateUrl: 'contact-page'
-		}
+      name: 'contact',
+      title: 'Contact',
+      templateUrl: 'contact-page'
+    }
 	];
 
   var _this = this;
