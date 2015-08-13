@@ -2,10 +2,19 @@
 
 Features:
 
-- Express Server
-- Angular.js routing (Single Page application)
-- Script minification and bundling
-- npm and bower libraries
+Angular Components used:
+- directives (Members Table)
+- angular-router
+- ng-repeat
+- html form
+- service
+
+Other things used:
+- node.js
+- npm
+- bower
+- express.js
+- bootstrap
 
 # Dependencies:
 
