@@ -17,8 +17,8 @@ app.provider('sbRoutes', function() {
       templateUrl: 'members-page'
     }, {
       name: 'about',
-			title: 'About',
-			templateUrl: 'about-page'
+      title: 'About',
+      templateUrl: 'about-page'
 		}, {
 			name: 'contact',
 			title: 'Contact',
