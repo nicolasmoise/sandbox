@@ -29,4 +29,4 @@ from the home directory
 - `npm i`
 - `npm start`
 
-go to [http://localhost:8080]
+go to [http://localhost:8080](http://localhost:8080)
