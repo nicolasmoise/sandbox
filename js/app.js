@@ -34,19 +34,17 @@ app.provider('sbRoutes', function() {
 });
 
 app.config(['$routeProvider', '$locationProvider', 'sbRoutesProvider',
+  function($routeProvider, $locationProvider, sbPagesProvider){
+    sbPagesProvider.routes.map(function(page){
+      $routeProvider.when('/' + page.name, { templateUrl: page.templateUrl });
+    });
 
-	function($routeProvider, $locationProvider, sbPagesProvider){
+    $routeProvider.otherwise({
+      redirectTo: '/add'
+    });
 
-		sbPagesProvider.routes.map(function(page){
-			$routeProvider.when('/' + page.name, { templateUrl: page.templateUrl });
-		});
-
-		$routeProvider.otherwise({
-			redirectTo: '/add'
-		});
-
-		$locationProvider.html5Mode(true);
-	}
+    $locationProvider.html5Mode(true);
+  }
 ]);
 
 app.controller('menuController', ['$route', 'sbRoutes', '$scope', function($route, sbRoutes, $scope){
@@ -88,7 +86,7 @@ app.service('Members', [function(){
     return members;
   };
 
-	this.delete = function(index){
-		members.splice(index, 1);
-	}
+  this.delete = function(index){
+    members.splice(index, 1);
+  }
 }]);
