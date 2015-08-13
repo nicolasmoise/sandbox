@@ -35,6 +35,7 @@ app.provider('sbRoutes', function() {
 
 app.config(['$routeProvider', '$locationProvider', 'sbRoutesProvider',
   function($routeProvider, $locationProvider, sbPagesProvider){
+
     sbPagesProvider.routes.map(function(page){
       $routeProvider.when('/' + page.name, { templateUrl: page.templateUrl });
     });
@@ -43,7 +44,7 @@ app.config(['$routeProvider', '$locationProvider', 'sbRoutesProvider',
       redirectTo: '/add'
     });
 
-    $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true);
   }
 ]);
 
