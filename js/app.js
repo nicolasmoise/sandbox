@@ -24,7 +24,7 @@ app.provider('sbRoutes', function() {
       title: 'Contact',
       templateUrl: 'contact-page'
     }
-	];
+  ];
 
   var _this = this;
 
