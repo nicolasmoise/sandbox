@@ -3,7 +3,10 @@ table.table.table-hover(ng-controller = 'membersController')
         th First Name
         th Last Name
         th Phone Number
-    tr(ng-repeat= 'member in members')
+        th
+    tr(ng-repeat= 'member in members track by $index')
         td {{member.firstName}}
         td {{member.lastName}}
         td {{member.phoneNumber}}
+        td
+            button.btn.btn-warning(ng-click='deleteMember($index)') Delete

@@ -65,10 +65,18 @@ app.controller('addController', ['$scope', 'Members', function($scope, Members){
 
 app.controller('membersController', ['$scope', 'Members', function($scope, Members){
 	$scope.members = Members.get();
+
+	$scope.deleteMember = function(index){
+		Members.delete(index);
+	}
 }]);
 
 app.service('Members', [function(){
-	var members = [];
+	var members = [{
+		firstName: 'Nicolas',
+		lastName: 'Moise',
+		phoneNumber: '514-245-6074'
+	}];
 
 	this.create = function(member){
 		members.push(member);
@@ -76,5 +84,9 @@ app.service('Members', [function(){
 
 	this.get = function(){
 		return members;
-	} 
+	}
+
+	this.delete = function(index){
+		members.splice(index, 1);
+	}
 }]);
