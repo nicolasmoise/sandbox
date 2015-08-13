@@ -5,7 +5,6 @@ This is a simple website meant to showcase my basic Angular skills and coding st
 Features:
 
 Angular Components used:
-- directives (Members Table)
 - angular-router
 - ng-repeat
 - html form
