@@ -19,7 +19,7 @@ app.provider('sbRoutes', function() {
       name: 'about',
       title: 'About',
       templateUrl: 'about-page'
-		}, {
+    }, {
 			name: 'contact',
 			title: 'Contact',
 			templateUrl: 'contact-page'
